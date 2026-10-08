@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cvdpcwou4rd5g"
+path="res://.godot/imported/Riverside Ride Short Loop.wav-32757ef3fe6dfb0f54ac2a715d2f231c.sample"
+
+[deps]
+
+source_file="res://flyer_assets/assets/audio/Riverside Ride Short Loop.wav"
+dest_files=["res://.godot/imported/Riverside Ride Short Loop.wav-32757ef3fe6dfb0f54ac2a715d2f231c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

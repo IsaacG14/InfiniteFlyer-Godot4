@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dj5iti1x6c0os"
+path="res://.godot/imported/Build_05.obj-c5925e259d5283b2961b3a6b9bea430d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Build_05.obj-c5925e259d5283b2961b3a6b9bea430d.mesh"]
+
+source_file="res://flyer_assets/assets/building_meshes/Build_05.obj"
+dest_files=["res://.godot/imported/Build_05.obj-c5925e259d5283b2961b3a6b9bea430d.mesh", "res://.godot/imported/Build_05.obj-c5925e259d5283b2961b3a6b9bea430d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

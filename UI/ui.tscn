@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgu4q25acje5q"]
+
+[ext_resource type="Script" path="res://UI/ui.gd" id="1_nry6k"]
+[ext_resource type="Texture2D" uid="uid://cu8fvqgfce0me" path="res://flyer_assets/assets/bar_glass.png" id="2_aom4n"]
+[ext_resource type="Texture2D" uid="uid://gf2q2y40u6px" path="res://flyer_assets/assets/bar_red.png" id="3_fg0cn"]
+[ext_resource type="FontFile" uid="uid://75ru8g0oxgna" path="res://flyer_assets/assets/Baloo2-Medium.ttf" id="4_rox2q"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_nry6k")
+
+[node name="FuelBar" type="TextureProgressBar" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 200.0
+grow_vertical = 0
+max_value = 10.0
+step = 0.01
+nine_patch_stretch = true
+stretch_margin_left = 6
+stretch_margin_top = 6
+stretch_margin_right = 6
+stretch_margin_bottom = 6
+texture_over = ExtResource("2_aom4n")
+texture_progress = ExtResource("3_fg0cn")
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 77.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_rox2q")
+theme_override_font_sizes/font_size = 48
+text = "Score: 0"
+
+[node name="Distance" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("4_rox2q")
+theme_override_font_sizes/font_size = 48
+text = "0m"

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkdhhcm8mdjur"]
+
+[ext_resource type="Script" path="res://environment/chunk.gd" id="1_gby5h"]
+
+[node name="Chunk" type="Node3D"]
+script = ExtResource("1_gby5h")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -250)

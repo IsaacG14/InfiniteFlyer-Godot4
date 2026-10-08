@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://175i8lphaygv"]
+
+[ext_resource type="Script" path="res://UI/title.gd" id="1_6d3n3"]
+[ext_resource type="Texture2D" uid="uid://b61ip4nm07hv5" path="res://flyer_assets/assets/styled_sky.hdr" id="2_spicg"]
+[ext_resource type="Texture2D" uid="uid://bcvpkq1yttxmo" path="res://flyer_assets/assets/buttons/play_button.png" id="3_flrhg"]
+[ext_resource type="Texture2D" uid="uid://d1375bsdx511m" path="res://flyer_assets/assets/buttons/play_button_pr.png" id="4_yg1m0"]
+[ext_resource type="Texture2D" uid="uid://cx718cmm8ubdq" path="res://flyer_assets/assets/buttons/play_button_h.png" id="5_lqmxc"]
+[ext_resource type="PackedScene" uid="uid://dgipu0ttkx3kf" path="res://flyer_assets/assets/cartoon_plane.glb" id="6_rb80q"]
+[ext_resource type="AudioStream" uid="uid://bl1hbctv727qc" path="res://flyer_assets/assets/audio/loswin23-small-airplane-520026.mp3" id="7_7ypin"]
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6d3n3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1526.0
+offset_bottom = 732.0
+texture = ExtResource("2_spicg")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -406.5
+offset_right = 406.5
+offset_bottom = 175.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 128
+text = "Infinite Flyer!"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.0
+offset_top = -187.0
+offset_right = 91.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_flrhg")
+texture_pressed = ExtResource("4_yg1m0")
+texture_hover = ExtResource("5_lqmxc")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="MiniPlane" parent="." instance=ExtResource("6_rb80q")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="EngineSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_7ypin")
+autoplay = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
